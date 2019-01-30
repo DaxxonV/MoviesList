@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Movies List</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="movies.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <h1 class="centerText">My Movies List</h1><br>
+        <div class = "centerText">
+        <b>Title: </b><input id= "title" type="text" name = "movieName" placeholder="Movie Title">
+        <b>Rating: </b><input id = "rating" type="number" name="movieRank" min="0" max="10" placeholder="Rate the movie from 0 to 10">
+        <button id = "submitBtn"><b>Add Movie</b></button>
+        </div>
+        <br><br>
+        <table id="MTable">
+            <tr>
+                <th onclick = "sortTable()" class="centerText tableHead">Title</th>
+                <th class="centerText tableHead">Rating</th>
+                <th class="centerText tableHead">Delete</th>
+            </tr>
+        </table>
+        <script src="movies.js"></script>
+    </body>
+</html>

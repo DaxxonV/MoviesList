@@ -1,0 +1,46 @@
+#MTable {
+    border: solid 1px lightgray;
+    margin: auto;
+    padding: 5px;
+}
+
+
+#rating, #title {
+    width: 12%;
+    margin-right: 1%;
+}
+
+.tableRow {
+    max-Width: 40px;
+    height: 30px;
+    max-height: 30px;
+    padding: 3px;
+}
+
+.tableHead {
+    width: 300px;
+    height: 40px;
+    padding: 3px;
+    border-bottom: solid 2px lightgrey;
+}
+
+.centerText {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background: #F5F5F5;
+}
+
+#deleteButton {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+
+
