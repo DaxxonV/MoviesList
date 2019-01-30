@@ -25,7 +25,11 @@ function sortTable() {
             }
         }
         if (shouldSwitch) {
-            alert(rows[1].getElementsByTagName("TD")[0].innerHTML);
+            let parent = rows[i].parentNode;
+            let currentRow = parent.getElementsByTagName("TR")[i];
+            let nextRow = parent.getElementsByTagName("TR")[i+1];
+            parent.insertBefore(nextRow, currentRow);
+            switching = true;
         }
     }
 }
