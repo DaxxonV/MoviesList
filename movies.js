@@ -1,27 +1,37 @@
 // A js program to add movie and rating to a movies table
 
 let table = document.getElementById("MTable");
-let submitBtn = document.getElementById("submitBtn")
+let submitBtn = document.getElementById("submitBtn");
 
 let titleHead = document.getElementsByTagName("th")[0];
 let ratingHead = document.getElementsByTagName("th")[1];
 let deleteHead = document.getElementsByTagName("th")[2];
 
 
-function sortTable() {
-    let table, rows, switching, i, x, y, shouldSwitch;
+function sortTable(n) {
+    let table, rows, switching, i, x, y, shouldSwitch, dir, switchCount = 0;
     table = document.getElementById("MTable");
     switching = true;
+    // Set the default direction to ascending
+    dir = "asc";
     while(switching) {
         switching = false;
         rows = table.rows;
+        // Loop through all rows except for first header
         for (i = 1; i < (rows.length - 1); i++) {
             shouldSwitch = false;
-            x = rows[i].getElementsByTagName("TD")[0];
-            y = rows[i+1].getElementsByTagName("TD")[0];
-            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                shouldSwitch = true;
-                break;
+            x = rows[i].getElementsByTagName("TD")[n];
+            y = rows[i+1].getElementsByTagName("TD")[n];
+            if (dir == "asc") {
+                if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                    shouldSwitch = true;
+                    break;
+            }
+            } else if (dir == "desc") {
+                if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                    shouldSwitch = true;
+                    break;
+                }
             }
         }
         if (shouldSwitch) {
@@ -30,8 +40,23 @@ function sortTable() {
             let nextRow = parent.getElementsByTagName("TR")[i+1];
             parent.insertBefore(nextRow, currentRow);
             switching = true;
+            switchCount++;
+        } else {
+            if (switchCount == 0 && dir == "asc") {
+                dir = "desc";
+                switching = true;
+            }
         }
     }
+}
+
+function hoverTextColor(x) {
+    x.style.cursor = "pointer";
+    x.style.color = "lightGreen";
+}
+
+function leaveTextColor(x) {
+    x.style.color = "black";
 }
 
 submitBtn.addEventListener("click", function() {

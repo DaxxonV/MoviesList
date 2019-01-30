@@ -18,8 +18,8 @@
         <br><br>
         <table id="MTable">
             <tr>
-                <th onclick = "sortTable()" class="centerText tableHead">Title</th>
-                <th class="centerText tableHead">Rating</th>
+                <th onclick = "sortTable(0)" onmouseover = "hoverTextColor(this)" onmouseout = "leaveTextColor(this)" class="centerText tableHead">Title</th>
+                <th onclick = "sortTable(1)" onmouseover = "hoverTextColor(this)" onmouseout = "leaveTextColor(this)" id = "ratingHeader" class="centerText tableHead">Rating</th>
                 <th class="centerText tableHead">Delete</th>
             </tr>
         </table>
