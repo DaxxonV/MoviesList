@@ -1,9 +1,7 @@
 # MoviesList
-A movies list which can be sorted by title or rating.
+A list of movies which can be sorted by title or rating.
 
-<br>
-<br>
 
-<a href="https://giant.gfycat.com/DearestFlawedIndianpalmsquirrel.webm"><img src="https://thumbs.gfycat.com/DearestFlawedIndianpalmsquirrel-size_restricted.gif"/></a>
+<a href="https://giant.gfycat.com/NecessaryMindlessEft.webm"><img src="https://thumbs.gfycat.com/NecessaryMindlessEft-size_restricted.gif"/></a>
 
 
